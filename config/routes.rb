@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :restaurants
 end
 
-# Prefix Verb   URI Pattern                     Controller#Action
+#          Prefix Verb   URI Pattern                     Controller #Action
 #     restaurants GET    /restaurants(.:format)          restaurants#index
 #                 POST   /restaurants(.:format)          restaurants#create
 #  new_restaurant GET    /restaurants/new(.:format)      restaurants#new
