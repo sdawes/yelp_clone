@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
+  validates :rating, inclusion: (1..5)
 end
 
 # Prefix                 Verb   URI Pattern                                            Controller  #Action
