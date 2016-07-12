@@ -57,6 +57,9 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "yelp_clone_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  # defined default url options in production files - can be changed to heroku etc later
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false

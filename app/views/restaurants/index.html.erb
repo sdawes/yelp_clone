@@ -1,16 +1,16 @@
 <% if @restaurants.any? %>
-  <% @restaurants.all.each do |restaurant| %>
-    <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
-    <%= restaurant.description %><br>
-    <%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %></br>
-    <%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete %></br>
-    <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant) %></br>
-    <h3>Reviews for <%= restaurant.name %></h3>
-    <% if restaurant.reviews.any? %>
+  <% @restaurants.all.each do |table_row| %>
+    <h2><%= link_to table_row.name, restaurant_path(table_row) %></h2>
+    <%= table_row.description %><br>
+    <%= link_to "Edit #{table_row.name}", edit_restaurant_path(table_row) %></br>
+    <%= link_to "Delete #{table_row.name}", restaurant_path(table_row), method: :delete %></br>
+    <%= link_to "Review #{table_row.name}", new_restaurant_review_path(table_row) %></br>
+    <h3>Reviews for <%= table_row.name %></h3>
+    <% if table_row.reviews.any? %>
       <ul>
-        <% restaurant.reviews.each do |review| %>
+        <% table_row.reviews.each do |review_table_row| %>
           <li>
-            <%= review.thoughts %> [<strong><%= review.rating %></strong>/5]
+            <%= review_table_row.thoughts %> [<strong><%= review_table_row.rating %></strong>/5]
           </li>
         <% end %>
       </ul>
