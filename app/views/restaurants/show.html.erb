@@ -4,9 +4,9 @@
 
 <% if @restaurant.reviews.any?%>
   <ul>
-    <% @restaurant.reviews.each do |review| %>
+    <% @restaurant.reviews.each do |table_row| %>
       <li>
-        <%= review.thoughts %>, <strong><%= review.rating %></strong>/5
+        <%= table_row.thoughts %>, <strong><%= table_row.rating %></strong>/5
       </li>
       <% end %>
   </ul>

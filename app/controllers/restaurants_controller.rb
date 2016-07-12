@@ -12,7 +12,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurants_path
     else
-      render 'new'
+      render 'new' #keep form the same with data fresh to re-input.
     end
   end
 

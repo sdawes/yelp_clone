@@ -8,9 +8,9 @@
     <h3>Reviews for <%= table_row.name %></h3>
     <% if table_row.reviews.any? %>
       <ul>
-        <% table_row.reviews.each do |review_table_row| %>
+        <% table_row.reviews.each do |table_row| %>
           <li>
-            <%= review_table_row.thoughts %> [<strong><%= review_table_row.rating %></strong>/5]
+            <%= table_row.thoughts %> [<strong><%= table_row.rating %></strong>/5]
           </li>
         <% end %>
       </ul>
