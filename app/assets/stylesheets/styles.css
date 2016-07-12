@@ -1,18 +1,18 @@
-/*body {
+.field_with_errors #restaurant_name {
+  border: 1px solid red;
+}
+
+body {
   font-family: helvetica, sans-serif;
   background-color: #deedf3;
 }
 
-h1 {
+h2 a{
   font-size: 1.5em;
   color: darkred;
 }
 
-h1 a {
-  color: yellow;
-}
-
-a:link, a:visited, a:hover, a:active {
+.link  {
     text-decoration: none;
     color: darkgrey;
 }
@@ -21,4 +21,4 @@ a:link, a:visited, a:hover, a:active {
   border: none;
   height: 20px;
   border-radius: 20px;
-}*/
+}
