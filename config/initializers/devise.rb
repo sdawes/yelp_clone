@@ -35,9 +35,9 @@ Devise.setup do |config|
 
 
   config.sign_out_via = :delete
-  
 
-  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'],
+
+  config.omniauth :facebook, '1808312579424622', ENV['FACEBOOK_APP_SECRET'],
   callback_url: "http://localhost:3000/users/auth/facebook/callback"
 
 
