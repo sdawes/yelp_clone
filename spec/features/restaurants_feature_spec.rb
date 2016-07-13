@@ -25,8 +25,7 @@ feature "======== FEATURE TESTS ========" do
 
     context 'creating restaurants' do
 
-      context 'an invalid restaurant' do
-      it 'does not let you submit a name that is too short' do
+      scenario 'does not let you submit a name that is too short' do
         visit '/restaurants'
         click_link 'Add a restaurant'
         fill_in 'Name', with: 'kf'
@@ -34,7 +33,7 @@ feature "======== FEATURE TESTS ========" do
         expect(page).not_to have_css 'h2', text: 'kf'
         expect(page).to have_content 'error'
       end
-    end
+
 
       scenario 'prompts user to fill out a form, then displays the new restaurant' do
         visit '/restaurants'
