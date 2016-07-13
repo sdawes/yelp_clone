@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-feature '' do
-  feature 'USERS' do
+  feature 'USER FEATURES' do
     context 'User not signed in and on the home page' do
       scenario 'should see a sign-in link and sign-up link' do
         visit('/')
@@ -37,4 +36,3 @@ feature '' do
       end
     end
   end
-end

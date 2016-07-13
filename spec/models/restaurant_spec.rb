@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "======== UNIT TESTS ========" do
+describe "RESTAURANT SPEC" do
 
   describe Restaurant, type: :model do
     scenario 'is not valid with a name of less than three characters' do
