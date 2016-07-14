@@ -9,10 +9,9 @@ describe "RESTAURANT SPEC" do
       expect(restaurant).not_to be_valid
     end
 
-    scenario 'is not valid unless it has a unique name' do
-      Restaurant.create(name: "Moe's Tavern")
-      expect(Restaurant.new(name: "Moe's Tavern")).to have(1).error_on(:name)
-    end
+    it 'is not valid unless it has a unique name' do
+    should validate_uniqueness_of(:name)
+  end
 
   end
 end

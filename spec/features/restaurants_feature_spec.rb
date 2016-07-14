@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
   feature 'RESTAURANT FEATURES' do
 
     context 'no restaurants have been added' do
