@@ -27,8 +27,18 @@ require 'rails_helper'
 
     context 'creating restaurants' do
 
-      scenario 'prompts user to fill out a form, then displays the new restaurant' do
+      before do
+        sign_up_user
         create_kfc
+      end
+
+      scenario "cannot be created without being signed-in" do
+        click_link('Sign out')
+        visit('/restaurants/new')
+        expect(page).to have_content "You need to sign in or sign up before continuing"
+    end
+
+      scenario 'prompts user to fill out a form, then displays the new restaurant' do
         expect(page).to have_content 'KFC'
         expect(current_path).to eq '/restaurants'
       end
@@ -44,14 +54,16 @@ require 'rails_helper'
     end
 
     context 'viewing restaurants' do
-
-      let!(:kfc){ Restaurant.create(name:'KFC') }
+      before do
+        sign_up_user
+        create_kfc
+      end
 
       scenario 'lets a user view a restaurant' do
         visit '/restaurants'
         click_link 'KFC'
         expect(page). to have_content 'KFC'
-        expect(current_path).to eq "/restaurants/#{kfc.id}"
+        expect(current_path).to eq "/restaurants/#{Restaurant.last.id}"
       end
     end
 
