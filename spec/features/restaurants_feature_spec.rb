@@ -12,7 +12,6 @@ require 'rails_helper'
 
     context 'restaurants have been added' do
       before do
-        # Restaurant.create(name: 'KFC')
         sign_up_user
         create_kfc
       end

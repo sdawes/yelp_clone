@@ -10,8 +10,8 @@ describe "RESTAURANT SPEC" do
     end
 
     it 'is not valid unless it has a unique name' do
-    should validate_uniqueness_of(:name)
-  end
+      should validate_uniqueness_of(:name)
+    end
 
   end
 end
